@@ -1,0 +1,60 @@
+<!doctype html>
+<html ⚡4email data-css-strict>
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <style amp4email-boilerplate>body{visibility:hidden}</style>
+  <style amp-custom>
+    body {
+     margin: 0px;
+    }  
+    
+    .input {
+      margin: 15px 0px 10px 10px;
+    }
+    
+    .button {
+      margin: 15px 0px 10px 10px;
+      padding: 10px;
+    } 
+  </style>
+</head>
+<body>
+<form method="post"
+  action-xhr="https://playground.amp.dev/documentation/examples/api/submit-form-input-text-xhr">
+  <p>Please submit the form!!!</p>
+  <div>
+    <input class="input"
+      type="text"
+      name="name"
+      placeholder="Name..."
+      required>
+    <br>
+    <input class="input"
+      type="email"
+      name="email"
+      placeholder="Email..."
+      required>
+    <br>
+    <textarea class="input" name="feedback" rows="4" cols="50" required></textarea>
+  </div>
+  <input class="button" type="submit"
+    value="Subscribe">
+  <div submit-success>
+    <template type="amp-mustache">
+      Success! Thanks {{name}} for trying the
+      <code>amp-form</code> demo! Try to insert the word "error" as a name input in the form to see how
+      <code>amp-form</code> handles errors.
+    </template>
+  </div>
+  <div submit-error>
+    <template type="amp-mustache">
+      Error! Thanks {{name}} for trying the
+      <code>amp-form</code> demo with an error response.
+    </template>
+  </div>
+</form>
+</body>
+</html>
