@@ -9,6 +9,8 @@ router.get('/', (req, res) => {
 });
 
 router.post('/feedback', (req, res) => {
+
+    console.log(req.query);
     
     /**
      * Setting CORS headers in the response for AMP requests coming from the gmail.
@@ -23,6 +25,8 @@ router.post('/feedback', (req, res) => {
       emailResponse : req.body.email,
       feedbackResponse : req.body.feedback  
     };
+
+    console.log(body)
                 
     res.send(body);
     });
