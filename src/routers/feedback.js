@@ -27,8 +27,6 @@ router.post('/feedback', (req, res) => {
     };
 
     console.log(body)
-                
-    res.send(body);
     });
 
 module.exports = router;
